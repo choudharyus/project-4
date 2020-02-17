@@ -7,9 +7,8 @@ A patient portal also known as "PP" is a secure online website which provides ac
 ## Project Design
 The plan to build this application (frontend/backend) by using Django technology.
   ### Backend:
-  SQL database is used at the backend for this application. Following two tables are created for the database.
-   - "patient_list" to hold all the data related to the patient
-   - "doctor_list" to hold all the data related to the doctor
+  SQL database is used at the backend for this application. One table called "Patient" is created for the database.
+   - "Patient" will hold all the data related to the patient
   ### Frontend:
   Frontend will be developed in Django with the combination of python and HTML.
   ### Styling:
