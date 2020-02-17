@@ -14,3 +14,5 @@ The plan to build this application (fontend/backend) by using Django technology.
   Frontend will be developed in Django with the combination of python and HTML.
   ### Styling
   For styling and CSS, developer decided to use "Skeleton" for this application. "Skeleton" has not been taught in the class which would help to meet one of the requirement.
+  ### Secure Access
+  In order to secure the patient data from unauthorized access; developer will use the authentication mechanism. Username and Password will be required to access the patient's data.
