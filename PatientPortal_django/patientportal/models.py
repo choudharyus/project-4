@@ -8,5 +8,4 @@ class Patient(models.Model):
     medication = models.CharField(max_length=500)
     diagnosis = models.CharField(max_length=1000)
 
-    def __str__(self):
-        return self.firstName + ", " + self.lastName
+

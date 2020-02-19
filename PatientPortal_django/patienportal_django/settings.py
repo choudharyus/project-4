@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+LOGIN_REDIRECT_URL = '/'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'patientportal',
-    'django_extensions'
+    'django_extensions',
+    'accounts',
+    'djfrontend',
+    'djfrontend.skeleton',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [

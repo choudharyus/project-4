@@ -1,11 +1,11 @@
+from django.shortcuts import render, redirect
 from django.shortcuts import render
-
 from .models import Patient
+from django.contrib.auth.decorators import login_required
 
+
+@login_required
 def patient_list(request):
-    patient = Patient.objects.all()
-    return render(request, 'patientportal/patient_list.html', {'patient': patient})
+    patients = Patient.objects.all()
+    return render(request, 'patientportal/patient_list.html', {'patients': patients})
 
-
-def login_page(request):
-    return render(request, 'patientportal/login_page.html', {'name': 'Shahzad Choudhary'})
