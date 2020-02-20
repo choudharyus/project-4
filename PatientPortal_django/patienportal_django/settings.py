@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'accounts',
     'djfrontend',
-    'djfrontend.skeleton',
-    'django.contrib.staticfiles'
+    'djfrontend.skeleton'
 ]
 
 MIDDLEWARE = [

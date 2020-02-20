@@ -8,15 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Patient Portal</title>
+    <link rel="stylesheet" href="{% static 'css/patientportal.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
     
 </head>
 
 <body>
-    <h1>Patient Portal</h1>
+  <div class="headingContainer">
+    <h1 class="mainHeading">Patient Portal</h1>
+  </div>
     <nav>
-
-        <button><a href="{% url 'patient_list' %}">Patient Data</a></button>
-        
+      <div class="btnContainer">
+        <button class="button-primary"><a href="{% url 'patient_list' %}">Patient List</a></button>
+      </div>  
 
         <div class="user-info">
             {% if user.is_authenticated %} Welcome, {{ user.username }}
