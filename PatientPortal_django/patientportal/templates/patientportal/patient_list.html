@@ -20,6 +20,7 @@
         <td>{{ patient.phone }}</td>
         <td>{{ patient.medication }}</td>
         <td>{{ patient.diagnosis }}</td>
+        <td><button class="button-primary"><a href="{% url 'patient_edit' pk=patient.id %}">Edit Patient</a></button></td>
     </tr>
     {% endfor %}
 </table>
