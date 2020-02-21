@@ -10,7 +10,7 @@ def patient_list(request):
     patients = Patient.objects.all()
     return render(request, 'patientportal/patient_list.html', {'patients': patients})
 
-
+@login_required
 def patient_create(request):
     if request.method == 'POST':
         form = PatientForm(request.POST)
@@ -32,4 +32,11 @@ def patient_edit(request, pk):
     else:
         form = PatientForm(instance=patient)
     return render(request, 'patientportal/patient_form.html', {'form': form})
+
+
+def patient_delete(request, pk):
+    Patient.objects.get(id=pk).delete()
+    return redirect('patient_list')
+
+
 

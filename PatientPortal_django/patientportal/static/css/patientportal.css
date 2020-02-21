@@ -20,4 +20,6 @@ body {
     background: goldenrod;
     border-radius: 3px;
 }
-
+.heading2 {
+    text-align: center;
+}
