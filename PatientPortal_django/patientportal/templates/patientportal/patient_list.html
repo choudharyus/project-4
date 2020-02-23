@@ -11,11 +11,6 @@
     <title>Patient Portal</title>
     <link rel="stylesheet" href="{% static 'css/patientportal.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
-    <style>
-        .heading2, .heading2 {
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     
@@ -37,14 +32,14 @@
     </tr>
     {% for patient in patients %}
     <tr>
-        <td><button class="button-primary"><a href="{% url 'patient_delete' pk=patient.id %}">Delete Patient</a></button></td>
+        <td><button class="btndelete"><a href="{% url 'patient_delete' pk=patient.id %}">Delete Patient</a></button></td>
         <td>{{ patient.firstName }}</td>
         <td>{{ patient.lastName }}</td>
         <td>{{ patient.DOB }}</td>
         <td>{{ patient.phone }}</td>
         <td>{{ patient.medication }}</td>
         <td>{{ patient.diagnosis }}</td>
-        <td><button class="button-primary"><a href="{% url 'patient_edit' pk=patient.id %}">Edit Patient</a></button></td>
+        <td><button class="btnedit"><a href="{% url 'patient_edit' pk=patient.id %}">Edit Patient</a></button></td>
         
     </tr>
     {% endfor %}

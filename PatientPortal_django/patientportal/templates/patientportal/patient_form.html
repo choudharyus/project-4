@@ -1,8 +1,27 @@
+{% extends 'patientportal/base.html' %}
+{% load static %} 
 
-{% extends 'patientportal/base.html' %} {% block content %}
-<h1>New Patient</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Patient Portal</title>
+    <link rel="stylesheet" href="{% static 'css/patientportal.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+</head>
+<body>
+
+<div class="add-patient"></div>
+{% block content %}
+<h1>Patient Data</h1>
 <form method="POST" class="patient-form">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Save</button>
+  <button class="button-primary" type="submit" class="save btn btn-default">Save</button>
 </form>
 {% endblock %}
+</div>
+</body>
+</html>
