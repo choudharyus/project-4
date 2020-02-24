@@ -1,1 +1,1 @@
-web: gunicorn patientportal_django.wsgi --log-file -
+web: gunicorn patientportal.wsgi --log-file -
