@@ -25,8 +25,10 @@ SECRET_KEY = '%pplb=keu)5u-9s#atiuz=e!jrq$%4a!o^^)8-@c6rbh3^(5v#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1',            
+'patientportal2020.herokuapp.com'
+]
 
 # Application definition
 
@@ -85,11 +87,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'patientportal',
         'USER': 'portaladmin',
-        'PASSWORD': 'admin',
+        'PASSWORD': '5541ee90552681ba7ef23453c8c6488888351d9d905647d2a616ba9754ef68b4',
         'HOST': 'localhost'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
